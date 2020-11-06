@@ -1,18 +1,19 @@
 import React from "react";
 import "semantic-ui-css/semantic.min.css";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => (
   <>
     <div class="ui large top fixed hidden menu">
       <div className="ui container">
         <div className="ui three buttons">
-          <button className="ui active button">Home</button>
+          <Link to="/home" className="ui active button">Home</Link>
           <button className="ui button">About</button>
-          <button className="ui button">Buy</button>
+          <Link to="/buy" className="ui button">Buy</Link>
         </div>
         <div className="right menu">
           <div className="item">
-            <a className="ui button">Log in</a>
+            <Link to="/login" className="ui button">Log in</Link>
           </div>
           <div className="item">
             <a className="ui primary button">Sign Up</a>
