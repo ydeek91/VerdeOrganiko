@@ -38,8 +38,3 @@ description :Succulent houseplant commonly called hanging balls or rosary plant.
 description : Heart cactus is a climbing plant with green, leathery and fleshy leaves, with a strange heart shape.
 
 
-
-
-
-
-
