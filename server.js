@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const routes = require("./routes");
+const axios = require("axios");
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -25,7 +26,7 @@ app.get("*", function (req, res) {
 
 //Connet to mongoose
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/verdeorganico",
+  process.env.MONGODB_URI || "mongodb://localhost/verdeorganiko",
   {
     useNewUrlParser: true,
   }

@@ -1,5 +1,5 @@
 {
-  "name": "verde-react",
+  "name": "verde-organiko",
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:3001/",
@@ -40,5 +40,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
