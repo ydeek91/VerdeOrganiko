@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
 
 
+
   <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -24,14 +25,107 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-  <title>Verde_Organico</title>
+  <title>Verde_OrganiKo</title>
   <style>
-    .ui.masthead.segment {
-      padding: 10%;
-      background-image: url("https://images.unsplash.com/photo-1602298674761-700e96568f5f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1061&q=80") !important;
-      background-repeat: no-repeat !important;
-      background-size: cover !important;
-      width: 100%;
+    .img-1,
+    .img-2,
+    .img-3,
+    .img-4 {
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100vh;
+      opacity: 0.75;
+      position: relative;
+      width: 100vw;
+    }
+
+
+
+    .img-1 {
+      background-image: url('https://i.ibb.co/myYJW1m/Fittonia.jpg');
+    }
+
+    .img-2 {
+      background-image: url('https://i.ibb.co/D4yK9hB/suculent.jpg');
+    }
+
+    .img-3 {
+      background-image: url('https://i.ibb.co/Ttc544Z/Calathea-orbifolia.jpg');
+    }
+
+    .img-4 {
+      background-image: url('https://i.ibb.co/TgRKkVm/Watermelon-peperomia.jpg');
+    }
+
+    .static {
+      position: relative;
+    }
+
+    .content {
+      background-color: #fff;
+      color: #5a5a5c;
+      padding: 50px;
+      text-align: left;
+    }
+
+    h1 {
+      background-color: #111;
+      color: #fff;
+      font-size: 80px;
+      font-weight: 400;
+      left: 0;
+      letter-spacing: 10px;
+      margin: auto;
+      padding: 20px 20px 20px 28px;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      text-transform: uppercase;
+      top: 50%;
+      width: intrinsic;
+      width: -moz-max-content;
+      width: -webkit-max-content;
+    }
+
+    h3 {
+      color: #111;
+      font-size: 20px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    @media screen and (max-width: 1030px) {
+
+      .img-1,
+      .img-2,
+      .img-3,
+      .img-4 {
+        background-attachment: scroll;
+      }
+    }
+
+    @media screen and (max-width: 420px) {
+      h1 {
+        font-size: 35px;
+        letter-spacing: 5px;
+        padding: 10px;
+      }
+
+      h3 {
+        font-size: 18px;
+        text-align: center;
+      }
+
+      p {
+        line-height: 1.5em;
+        text-align: center;
+      }
+
+      .content {
+        padding: 50px 5px;
+      }
     }
   </style>
   <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
@@ -40,6 +134,8 @@
       api_key: 'wg_565e401885e979fd3b5c18c01abd00102'
     });
   </script>
+  <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+  <div class="elfsight-app-e79f27a9-ccb1-47b1-90fd-869b8191393d"></div>
 </head>
 
 <body>
