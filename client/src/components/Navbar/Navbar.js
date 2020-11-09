@@ -1,26 +1,50 @@
 import React from "react";
 import "semantic-ui-css/semantic.min.css";
-import { Link } from 'react-router-dom';
 
-const Navbar = () => (
-  <>
-    <div class="ui large top fixed hidden menu">
-      <div className="ui container">
-        <div className="ui three buttons">
-          <Link to="/home" className="ui active button">Home</Link>
-          <button className="ui button">About</button>
-          <Link to="/buy" className="ui button">Buy</Link>
-        </div>
-        <div className="right menu">
-          <div className="item">
-            <Link to="/login" className="ui button">Log in</Link>
           </div>
-          <div className="item">
-            <a className="ui primary button">Sign Up</a>
-          </div>
-        </div>
-      </div>
-    </div>
+        </Menu.Item>
+        <Button
+          basic
+          inverted
+          color="green"
+          data-inverted="center"
+          data-tooltip="Return Home"
+          data-position="bottom center"
+        >
+          Home
+        </Button>
+      </Container>
+      <Button
+        basic
+        inverted
+        color="green"
+        data-inverted="center"
+        data-tooltip="Login Into Your Account"
+        data-position="bottom center"
+      >
+        Login
+      </Button>
+      <Button
+        basic
+        inverted
+        color="blue"
+        data-inverted="center"
+        data-tooltip="Create New Account"
+        data-position="bottom center"
+      >
+        Sign up
+      </Button>
+      <Button
+        basic
+        inverted
+        color="red"
+        data-inverted="center"
+        data-tooltip="Buy A Plant"
+        data-position="bottom center"
+      >
+        <i class="shop icon"></i> Buy
+      </Button>
+    </Menu>
   </>
 );
 
