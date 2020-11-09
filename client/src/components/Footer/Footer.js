@@ -9,8 +9,8 @@ const Footer = () => (
         <br />
         <br /> Follow us on Instagram
       </h3>
-
       <Button
+        href="https://www.instagram.com/verde_organiko/"
         className="ui instagram button"
         basic
         ui
@@ -22,7 +22,10 @@ const Footer = () => (
       >
         <i className="instagram icon"></i>
         Instagram
-      </Button>
+      </Button>{" "}
+      <br />
+      <h4>Share Us On Facebook</h4>
+      <div class="elfsight-app-dfac43c0-8661-423f-84b0-39e230a7ec51"></div>
     </div>
   </div>
 );

@@ -10,7 +10,7 @@ function App() {
     <>
       <Router>
         <Navbar />
-
+        <div class="elfsight-app-2d5a33c3-a371-44d5-91d0-496ed2d6bc2e"></div>
         <Parallax />
 
         <Footer />
