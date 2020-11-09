@@ -4,6 +4,8 @@ import { Button } from "semantic-ui-react";
 const Footer = () => (
   <div className="ui inverted black vertical footer segment">
     <div className="ui center aligned container">
+      <div class="elfsight-app-dfac43c0-8661-423f-84b0-39e230a7ec51"></div>
+
       <h3 className="ui inverted header">
         &copy; Copyright 2020 | All rights reserved | Verde_Organiko
         <br />
@@ -22,10 +24,7 @@ const Footer = () => (
       >
         <i className="instagram icon"></i>
         Instagram
-      </Button>{" "}
-      <br />
-      <h4>Share Us On Facebook</h4>
-      <div class="elfsight-app-dfac43c0-8661-423f-84b0-39e230a7ec51"></div>
+      </Button>
     </div>
   </div>
 );
