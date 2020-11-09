@@ -9,7 +9,7 @@ const Parallax = () => (
   <>
     <section>
       <div className="ui jumbotron">
-        <h1>WELCOME</h1>
+        <h3>WELCOME</h3>
       </div>
     </section>
     <section className="img-1 ">
