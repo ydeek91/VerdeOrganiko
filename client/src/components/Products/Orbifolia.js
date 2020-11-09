@@ -12,7 +12,7 @@ function Orbifolia() {
                         <img className="ui image" src="https://i.ibb.co/cb2kRy3/Calathea-orbifolia-500x500.jpg" />
                     </div>
                     <div className="ten wide column">
-                        <h1 className="ui header">CALATHEA ORBIFOLIA</h1>
+                        <h2 className="ui header">CALATHEA ORBIFOLIA</h2>
                         <strong>DESCRIPTION</strong>
                         <p>This exotic variety of Calathea is renowned for its broad, elegantly patterned leaves. Dramatic striping on Orbifolia's foliage adds texture and impact to your space. It prefers medium to low light conditions and consistent, moderate watering. When properly cared for, its leaves can reach upwards of 8" wide.</p>
 

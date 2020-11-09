@@ -4,10 +4,9 @@ import About from "../About/About";
 import About2 from "../About/About2";
 import About3 from "../About/About3";
 import About4 from "../About/About4";
-import "./Hero.css";
-const Hero = () => (
+import "./Parallax.css";
+const Parallax = () => (
   <>
-    <div class="elfsight-app-2d5a33c3-a371-44d5-91d0-496ed2d6bc2e"/>
     <section>
       <div className="ui jumbotron">
         <h3>WELCOME</h3>
@@ -55,4 +54,4 @@ const Hero = () => (
   </>
 );
 
-export default Hero;
+export default Parallax;

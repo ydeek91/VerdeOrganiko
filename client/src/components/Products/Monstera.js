@@ -12,7 +12,7 @@ function Monstera() {
                         <img className="ui image" src="https://i.ibb.co/3Cgh3JK/Screen-Shot-2020-11-08-at-2-33-27-PM-500x500.png" />
                     </div>
                     <div className="ten wide column">
-                        <h1 className="ui header">MONSTERA ADANONSII</h1>
+                        <h2 className="ui header">MONSTERA ADANONSII</h2>
                         <strong>DESCRIPTION</strong>
                         <p>The Monstera Adansonii, aka the "Swiss Cheese" plant, gets its nickname from the large holes in its leaves called "fenestrations." These holes are a theorized evolutionary advantage that allows light to pass to the lower leaves of the plant in its natural low light environment beneath the jungle canopy, as well as allowing wind to easily pass through the leaves.</p>
 

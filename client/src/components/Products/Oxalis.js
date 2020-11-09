@@ -12,7 +12,7 @@ function Oxalis() {
                         <img className="ui image" src="https://i.ibb.co/fdjb3q2/Oxalis-triangularis-500x500.jpg" />
                     </div>
                     <div className="ten wide column">
-                        <h1 className="ui header">OXALIS TRIANGULARIS</h1>
+                        <h2 className="ui header">OXALIS TRIANGULARIS</h2>
                         <strong>DESCRIPTION</strong>
                         <p>Yes, you read it right - This is a Purple Shamrock plant that's unlike any other. Although its soft whitish-pink flowers are delicate and beautiful, it's the remarkable leaves that will truly capture your attention. Oxalis Triangularis boasts deep purple, heart-shaped leaves in an impressive shamrock formation.</p>
 

@@ -11,6 +11,8 @@ import PileaProduct from "./Pages/PileaProduct";
 import OrbifoliaProduct from "./Pages/OrbifoliaProduct";
 import MonsteraProduct from "./Pages/MonsteraProduct";
 import OxalisProduct from "./Pages/OxalisProduct";
+import Footer from "./components/Footer/Footer";
+// import Parallax from "./components/Parallax/Parallax";
 
 function App() {
   return (
@@ -34,6 +36,10 @@ function App() {
           <Route path='/sixth' exact component={OxalisProduct} />
           {/* <LoginForm /> */}
         </Switch>
+        {/* <div class="elfsight-app-2d5a33c3-a371-44d5-91d0-496ed2d6bc2e"></div> */}
+        {/* <Parallax /> */}
+
+        <Footer />
       </Router>
     </>
   );

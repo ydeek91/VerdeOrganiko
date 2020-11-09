@@ -12,7 +12,7 @@ function Calathea() {
                         <img className="ui image" src="https://i.ibb.co/8MNvKnD/Calathea-ornata-500x500.jpg" />
                     </div>
                     <div className="ten wide column">
-                        <h1 className="ui header">CALATHEA MEDALLION</h1>
+                        <h2 className="ui header">CALATHEA MEDALLION</h2>
                         <strong>DESCRIPTION</strong>
                         <p>Calathea roseopicta, known at the ‘Medallion’ has large, oval shaped foliage with distinctive pink and white feather-shaped variegation on its emerald green leaves. The underside of each leaf exhibits a deep, rich burgundy hue. .</p>
 

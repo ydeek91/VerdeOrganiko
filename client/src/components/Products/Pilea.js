@@ -12,7 +12,7 @@ function Pilea() {
                         <img className="ui image" src="https://i.ibb.co/pyw3brk/Pilea-peperomioides-500x500.jpg" />
                     </div>
                     <div className="ten wide column">
-                        <h1 className="ui header">PILEA PEPEROMIOIDES</h1>
+                        <h2 className="ui header">PILEA PEPEROMIOIDES</h2>
                         <strong>DESCRIPTION</strong>
                         <p>Pilea peperomioides, also known as Chinese Money Plant, is low-maintenance and easy to grow. Native to the Yunnan province of China, this plant has been popular in Scandinavia for decades, but has been hard to find in the U.S until recently. Its round, glossy leaves grow quickly from a central stem. </p>
 

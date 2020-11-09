@@ -12,7 +12,7 @@ function Product() {
                         <img className="ui image" src="https://i.ibb.co/CV6hMX8/Ficus-elastica-2-500x500.jpg" />
                     </div>
                     <div className="ten wide column">
-                        <h1 className="ui header">FICUS ELASTICA RUBY</h1>
+                        <h2 className="ui header">FICUS ELASTICA RUBY</h2>
                         <strong>DESCRIPTION</strong>
                         <p>The Ficus Elastica Ruby displays beautiful, tri-colored variegation with shades of green, pink and white. The leaves are a subtle way to bring a pop of color into a space, and go great with anything mauve and terracotta. It is a high light plant that will appreciate evenly moist soil, although it likes to dry out between waterings.</p>
 
