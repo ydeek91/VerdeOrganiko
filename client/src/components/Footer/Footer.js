@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "semantic-ui-react";
+import './Footer.css';
 
 const Footer = () => (
   <div className="ui inverted black vertical footer segment">
