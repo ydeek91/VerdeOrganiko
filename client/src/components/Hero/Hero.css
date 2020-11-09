@@ -1,7 +1,14 @@
 .ui.masthead.segment {
-    padding: 10%;
-    background-image: url("https://images.unsplash.com/photo-1602298674761-700e96568f5f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1061&q=80") !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-    width: 100%;
+    background: url("https://i.ibb.co/PmQf969/anahi-martinez-AG2-uhdd-J-g-unsplash.jpg") center center/cover no-repeat;
+    height: 100vh;
   }
+
+  .ui.content.container {
+    height: 150px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}

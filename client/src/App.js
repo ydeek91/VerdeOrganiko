@@ -1,27 +1,39 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "semantic-ui-css/semantic.min.css";
-import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
-import LoginForm from "./components/LoginForm/LoginForm";
 import Product from "./Pages/Product";
 import Home from "./Pages/Home";
 import Login from "./Pages/Login";
+import ProductPage from "./Pages/ProductPage";
+import CalatheaProduct from "./Pages/CalatheaProduct";
+import PileaProduct from "./Pages/PileaProduct";
+import OrbifoliaProduct from "./Pages/OrbifoliaProduct";
+import MonsteraProduct from "./Pages/MonsteraProduct";
+import OxalisProduct from "./Pages/OxalisProduct";
 
 function App() {
   return (
     <>
       <Router>
         <Navbar />
-        {/* <Hero /> */}
-        {/* <h2 class="ui center aligned icon header">
+        <Switch>
+          {/* <Hero /> */}
+          {/* <h2 class="ui center aligned icon header">
           <i class="circular users icon"></i>
           About us
         </h2> */}
-        <Route path='/buy' exact component={Product} />
-        <Route path='/home' exact component={Home} />
-        <Route path='/login' exact component={Login} />
-        {/* <LoginForm /> */}
+          <Route path='/buy' exact component={Product} />
+          <Route path='/home' exact component={Home} />
+          <Route path='/login' exact component={Login} />
+          <Route path='/first' exact component={ProductPage} />
+          <Route path='/second' exact component={CalatheaProduct} />
+          <Route path='/third' exact component={PileaProduct} />
+          <Route path='/fourth' exact component={OrbifoliaProduct} />
+          <Route path='/fifth' exact component={MonsteraProduct} />
+          <Route path='/sixth' exact component={OxalisProduct} />
+          {/* <LoginForm /> */}
+        </Switch>
       </Router>
     </>
   );
