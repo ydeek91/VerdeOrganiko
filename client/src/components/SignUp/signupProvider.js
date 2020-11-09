@@ -25,3 +25,4 @@ const SignupProvider = props => {
     );
 };
 
+export default SignupProvider;
