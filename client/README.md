@@ -8,7 +8,7 @@ The motivation for this project was a childhood friend and his fiance. They star
 
 ## Description
 
-The goal for this assignment was to create a full stack MERN web application that will allow the owner to sell their succulent plants not only out of their city in Puerto Rico but also outside of P.R. The user will be able to purchased their desire plants online via Pay Pall Payment method. the user can also contact verde Organiko for detailed instructions of their purchased or any relative questions, the site is set up to be a billingual page ,for English and Spanish. The web page is mobile responsive.
+The goal for this project was to create a full stack MERN web application that will allow the owner to sell their succulent plants not only out of their city in Puerto Rico but also outside of P.R. The user will be able to purchased their desire plants online via Pay Pall Payment method. the user can also contact verde Organiko for detailed instructions of their purchased or any relative questions, the site is set up to be a billingual page ,for English and Spanish. The web page is mobile responsive.
 
 ### Demo for the deployed app
 
@@ -23,7 +23,7 @@ The goal for this assignment was to create a full stack MERN web application tha
 
 ### User Story
 
-As a user, I want to be able to view and buy succulents. I want to be able to login into my account. I should also be able to send the owner email about my desire preferences of my purchased, type, weight, size, decoration, and instructions to take care of my plant. If the user chhose a desire plant, It should be able to send me to the pay pall account buying options.
+As a user, I want to be able to view and buy succulents. I want to be able to login into my account. I should also be able to send the owner email about my desire preferences of my purchased, type, weight, size, decoration, and instructions to take care of my plant. If the user choose a desire plant, It should be able to send me to the pay pall account buying options.
 
 ## Table of contents
 
@@ -66,6 +66,7 @@ The application will be invoked with the following command:
 - elfsight api for the pop widgets and contact form
 - Semantic-UI for the css framework styling
 - Paypal api for payments
+- Heroku for deployment
 
 ## Licence
 
