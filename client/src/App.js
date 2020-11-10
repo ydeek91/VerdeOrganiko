@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Product from "./Pages/Product";
 import Home from "./Pages/Home";
 import Login from "./Pages/Login";
+import Signup from "./components/Signup";
 import ProductPage from "./Pages/ProductPage";
 import CalatheaProduct from "./Pages/CalatheaProduct";
 import PileaProduct from "./Pages/PileaProduct";
@@ -29,6 +30,7 @@ function App() {
           <Route path='/buy' exact component={Product} />
           <Route path='/home' exact component={Home} />
           <Route path='/login' exact component={Login} />
+          <Route path='/sign-up' exact component={Signup} />
           <Route path='/first' exact component={ProductPage} />
           <Route path='/second' exact component={CalatheaProduct} />
           <Route path='/third' exact component={PileaProduct} />
