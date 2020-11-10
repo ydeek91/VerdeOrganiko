@@ -43,12 +43,12 @@
 h1 {
   background-color: #111;
   color: #fff;
-  font-size: 80px;
+  font-size: 60px;
   font-weight: 400;
   left: 0;
-  letter-spacing: 10px;
+  letter-spacing: 5px;
   margin: auto;
-  padding: 20px 20px 20px 28px;
+  padding: 10px 10px 10px 10px;
   position: absolute;
   right: 0;
   text-align: center;
@@ -59,6 +59,7 @@ h1 {
   width: -webkit-max-content;
 }
 
+
 h3 {
   color: #111;
   font-size: 20px;
@@ -66,7 +67,7 @@ h3 {
   text-transform: uppercase;
 }
 
-@media screen and (max-width: 1030px) {
+@media screen and (max-width: 960px) {
   .img-1,
   .img-2,
   .img-3,
