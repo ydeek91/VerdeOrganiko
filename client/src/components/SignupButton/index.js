@@ -29,3 +29,40 @@ const Button = props => {
         icon,
         onClick
     } = props;
+
+    const v = variant ? variants[variant] : '';
+
+    const btnVariant = icon && text ? v : icon && !text ? '' : v;
+
+    const btn =
+        icon && text ? 'with-icon' : icon && !text ? 'icon-only' : 'text-only';
+
+    const classNames = `input-btn${`${className && ` ${className}`}`}${btnVariant && ` ${btnVariant}`
+        }${` ${size}`} ${btn}`;
+
+    return (
+        <button
+            id={id}
+            tabIndex={tabIndex}
+            aria-label={ariaLabel}
+            aria-expanded={ariaExpanded}
+            role={role}
+            disabled={disabled}
+            className={classNames}
+            type={type}
+            onClick={onClick}
+        >
+            {text && <span className='btn-text'>{text}</span>}
+            {icon && <div className='btn-icon'>{icon}</div>}
+        </button>
+    );
+};
+
+Button.defaultProps = {
+    type: 'button',
+    variant: 'secondary',
+    size: 'md',
+    className: ''
+};
+
+export default Button;
