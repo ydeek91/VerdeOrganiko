@@ -12,7 +12,7 @@ The goal for this project was to create a full stack MERN web application that w
 
 ### Demo for the deployed app
 
-![Verde Organiko demo](https://i.ibb.co/9qzDsnn/Verde-Organi-Ko.gif)
+![Verde Organiko demo](https://github.com/ydeek91/VerdeOrganiko/blob/main/client/public/assets/images/Verde_OrganiKo.gif)
 ![Verde Organiko screenshot](https://i.ibb.co/3My64WM/Screenshot-108.png)
 ![Verde Organiko screenshot](https://i.ibb.co/Kjdbt31/Screenshot-112.png)
 ![Verde Organiko screenshot](https://i.ibb.co/NKPQhK9/Screenshot-113.png)
