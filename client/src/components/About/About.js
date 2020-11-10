@@ -8,7 +8,7 @@ const About = () => (
         <div class="column">
           <img
             class="ui medium circular image "
-            src="https://i.ibb.co/x8qGM59/EBC4314-E-9010-4-BF1-87-D7-9982-BCB7-E6-A3.jpg"
+            src="https://media2.giphy.com/media/CopnJzvz3G9tm/200w.webp?cid=ecf05e47d7z0xiytsyct5jrpx258wtmd3yjwfg4r7ems4r5l&rid=200w.webp"
           ></img>
         </div>
         <div class="column">
