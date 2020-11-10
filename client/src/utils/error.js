@@ -6,7 +6,7 @@
 
 import { error } from 'react-notification-system-redux';
 
-import { signOut } from '../containers/Login/actions';
+import { signOut } from '../components/Login/actions';
 
 const handleError = (err, dispatch, title = '') => {
     const unsuccessfulOptions = {

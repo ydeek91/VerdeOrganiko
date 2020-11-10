@@ -18,8 +18,8 @@ import {
 import { setAuth, clearAuth } from '../Authentication/actions';
 import setToken from '../../utils/token';
 import handleError from '../../utils/error';
-import { clearCart } from '../Cart/actions';
-import { clearAccount } from '../Account/actions';
+
+
 import { allFieldsValidation } from '../../utils/validation';
 
 export const loginChange = (name, value) => {
