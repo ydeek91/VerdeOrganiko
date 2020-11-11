@@ -5,6 +5,9 @@
  */
 
 import React from 'react';
+import { connect } from 'react-redux';
+import { Redirect, Link, withRouter } from 'react-router-dom';
+import { Grid } from 'semantic-ui-react';
 import actions from '../../actions';
 import Input from '../../components/Input';
 import Button from '../../components/SignupButton';
@@ -12,7 +15,7 @@ import LoadingIndicator from '../../components/LoadingIndicator';
 import SignupProvider from '../../components/SignupProvider';
 import Checkbox from '../../components/Checkbox';
 
-class Signup extends React.PureComponent {
+export class Signup extends React.PureComponent {
     render() {
         const {
             authenticated,
@@ -39,13 +42,10 @@ class Signup extends React.PureComponent {
                 <h2>Sign Up</h2>
                 <hr />
                 <form onSubmit={handleSubmit} noValidate>
-                    <Row>
-                        <Col
-                            xs={{ size: 12, order: 2 }}
-                            md={{ size: '6', order: 1 }}
-                            className='col-no-padding'
-                        >
-                            <Col xs='12' md='12'>
+                    <Grid>
+                        <Grid.Row>
+                            <Grid.Column>
+
                                 <Input
                                     type={'text'}
                                     error={formErrors['email']}
@@ -57,8 +57,8 @@ class Signup extends React.PureComponent {
                                         signupChange(name, value);
                                     }}
                                 />
-                            </Col>
-                            <Col xs='12' md='12'>
+                            </Grid.Column>
+                            <Grid.Column>
                                 <Input
                                     type={'text'}
                                     error={formErrors['firstName']}
@@ -70,8 +70,8 @@ class Signup extends React.PureComponent {
                                         signupChange(name, value);
                                     }}
                                 />
-                            </Col>
-                            <Col xs='12' md='12'>
+                            </Grid.Column>
+                            <Grid.Column>
                                 <Input
                                     type={'text'}
                                     error={formErrors['lastName']}
@@ -83,8 +83,8 @@ class Signup extends React.PureComponent {
                                         signupChange(name, value);
                                     }}
                                 />
-                            </Col>
-                            <Col xs='12' md='12'>
+                            </Grid.Column>
+                            <Grid.Column>
                                 <Input
                                     type={'password'}
                                     label={'Password'}
@@ -96,12 +96,13 @@ class Signup extends React.PureComponent {
                                         signupChange(name, value);
                                     }}
                                 />
-                            </Col>
-                        </Col>
-                        <Col xs={{ size: 12, order: 1 }} md={{ size: '6', order: 2 }}>
-                            <SignupProvider />
-                        </Col>
-                    </Row>
+                            </Grid.Column>
+
+                            <Grid.Column>
+                                <SignupProvider />
+                            </Grid.Column>
+                        </Grid.Row>
+                    </Grid>
                     <hr />
                     <Checkbox
                         id={'subscribe'}
@@ -137,4 +138,4 @@ const mapStateToProps = state => {
     };
 };
 
-export default connect(mapStateToProps, actions)(Signup);
+export default withRouter(connect(mapStateToProps, actions)(Signup));

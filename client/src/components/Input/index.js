@@ -51,7 +51,7 @@ const Input = props => {
     } else if (type === 'number') {
         const styles = `input-box${error ? ' invalid' : ''}`;
 
-        const handleOnInput = e => {
+        const handleOnInput = event => {
             if (!decimals) {
                 event.target.value = event.target.value.replace(/[^0-9]*/g, '');
             }
