@@ -64,6 +64,7 @@ The application will be invoked with the following command:
 - React
 - Weglog api for page translation
 - elfsight api for the pop widgets and contact form
+- Passport.js for login 
 - Semantic-UI for the css framework styling
 - Paypal api for payments
 - Heroku for deployment
