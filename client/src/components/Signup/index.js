@@ -7,14 +7,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Redirect, Link, withRouter } from 'react-router-dom';
-import { Grid, Button, Form, } from 'semantic-ui-react';
+import { Grid, Form } from 'semantic-ui-react';
 import actions from '../../actions';
 import Input from '../../components/Input';
 import SignupButton from '../../components/SignupButton';
 import LoadingIndicator from '../../components/LoadingIndicator';
-import SignupProvider from '../../components/SignupProvider';
-import Checkbox from '../../components/Checkbox';
-import './Sign.css';
+import "./SignStyle.css";
 
 export class Signup extends React.PureComponent {
     state = {
@@ -22,15 +20,15 @@ export class Signup extends React.PureComponent {
     }
     render() {
         const {
-            authenticated,
+
             signupFormData,
             formErrors,
             isLoading,
             isSubmitting,
-            isSubscribed,
+
             signupChange,
             signUp,
-            subscribeChange
+
         } = this.props;
 
 

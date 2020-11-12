@@ -6,14 +6,13 @@
 
 import React from 'react';
 import axios from 'axios';
-import { Redirect, Link } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import { Grid, Header, Image, Form, Segment, Message } from "semantic-ui-react";
 import { connect } from 'react-redux';
 import actions from '../../actions';
-import Input from '../Input';
+
 import { Button } from 'semantic-ui-react';
-import LoadingIndicator from '../LoadingIndicator';
-import SignupProvider from '../SignupProvider';
+
 
 class Login extends React.Component {
   state = {
@@ -30,12 +29,10 @@ class Login extends React.Component {
   }
   render() {
     const {
-      authenticated,
-      loginFormData,
-      loginChange,
-      login,
+
+
       formErrors,
-      isLoading,
+
       isSubmitting
     } = this.props;
 
