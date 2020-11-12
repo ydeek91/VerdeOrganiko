@@ -29,7 +29,7 @@ function Navbar() {
             <nav className='navbar'>
                 <div className='navbar-container'>
                     <Link to='/home' className='navbar-logo' onClick={closeMobileMenu}>
-                        VERDE ORGANICS
+                        VERDE ORGANIKO
           </Link>
                     <div className='menu-icon' onClick={handleClick}>
                         <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
@@ -50,13 +50,13 @@ function Navbar() {
               </Link>
                         </li>
                         <li className='nav-item'>
-                            <Link
+                            {/* <Link
                                 to='/about'
                                 className='nav-links'
                                 onClick={closeMobileMenu}
                             >
                                 About
-              </Link>
+              </Link> */}
                         </li>
                         <li className='nav-item'>
                             <Link

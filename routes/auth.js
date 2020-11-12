@@ -141,7 +141,7 @@ router.post('/auth/register', (req, res) => {
 
                     //await mailgun.sendEmail(user.email, 'signup', null, user.profile);
 
-                    jwt.sign(payload, secret, { expiresIn: tokenLife }, (err, token) => {
+                    jwt.sign(payload, 'verdeorganik', { expiresIn: 3600 }, (err, token) => {
                         res.status(200).json({
                             success: true,
                             subscribed,

@@ -14,8 +14,12 @@ import SignupButton from '../../components/SignupButton';
 import LoadingIndicator from '../../components/LoadingIndicator';
 import SignupProvider from '../../components/SignupProvider';
 import Checkbox from '../../components/Checkbox';
+import './Sign.css';
 
 export class Signup extends React.PureComponent {
+    state = {
+        authenticated: false
+    }
     render() {
         const {
             authenticated,
@@ -29,11 +33,13 @@ export class Signup extends React.PureComponent {
             subscribeChange
         } = this.props;
 
-        if (authenticated) return <Redirect to='/dashboard' />;
+
+        if (this.state.authenticated) return <Redirect to='/' />;
 
         const handleSubmit = event => {
             event.preventDefault();
             signUp();
+            this.setState({ authenticated: true })
         };
 
         return (
@@ -42,11 +48,11 @@ export class Signup extends React.PureComponent {
                 <h2>Sign Up</h2>
                 <hr />
                 <form onSubmit={handleSubmit} noValidate>
-                    <Grid>
+                    <Form>
                         <Grid.Row>
-                            <Grid.Column>
+                            <Form.Field>
 
-                                <Form.Input
+                                <Input
                                     type={'text'}
                                     error={formErrors['email']}
                                     label={'Email Address'}
@@ -57,9 +63,9 @@ export class Signup extends React.PureComponent {
                                         signupChange(name, value);
                                     }}
                                 />
-                            </Grid.Column>
-                            <Grid.Column>
-                                <Form.Input
+                            </Form.Field>
+                            <Form.Field>
+                                <Input
                                     type={'text'}
                                     error={formErrors['firstName']}
                                     label={'First Name'}
@@ -70,9 +76,9 @@ export class Signup extends React.PureComponent {
                                         signupChange(name, value);
                                     }}
                                 />
-                            </Grid.Column>
-                            <Grid.Column>
-                                <Form.Input
+                            </Form.Field>
+                            <Form.Field>
+                                <Input
                                     type={'text'}
                                     error={formErrors['lastName']}
                                     label={'Last Name'}
@@ -83,9 +89,9 @@ export class Signup extends React.PureComponent {
                                         signupChange(name, value);
                                     }}
                                 />
-                            </Grid.Column>
-                            <Grid.Column>
-                                <Form.Input
+                            </Form.Field>
+                            <Form.Field>
+                                <Input
                                     type={'password'}
                                     label={'Password'}
                                     error={formErrors['password']}
@@ -96,12 +102,14 @@ export class Signup extends React.PureComponent {
                                         signupChange(name, value);
                                     }}
                                 />
-                            </Grid.Column>
+                            </Form.Field>
 
 
                         </Grid.Row>
-                    </Grid>
+                    </Form>
+                    <br />
                     <hr />
+                    <br />
 
                     <div className='d-flex flex-column flex-md-row align-items-md-center justify-content-between'>
                         <SignupButton
@@ -110,6 +118,8 @@ export class Signup extends React.PureComponent {
                             text='Sign Up'
                             disabled={isSubmitting}
                         />
+                        <br />
+                        <br />
                         <Link className='mt-3 mt-md-0 redirect-link' to={'/login'}>
                             Back to login
               </Link>
