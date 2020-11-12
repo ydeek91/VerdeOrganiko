@@ -38,55 +38,51 @@ class Login extends React.PureComponent {
     };
 
     return (
-      <div className='login-form'>
-        {isLoading && <LoadingIndicator />}
-        <h2>Login</h2>
-        <hr />
-        <form onSubmit={handleSubmit} noValidate>
-          <Row>
-            <Col
-              xs={{ size: 12, order: 2 }}
-              md={{ size: '6', order: 1 }}
-              className='col-no-padding'
-            >
-              <Col xs='12' md='12'>
-                <Input
-                  type={'text'}
-                  error={formErrors['email']}
-                  label={'Email Address'}
-                  name={'email'}
-                  placeholder={'Please Enter Your Email'}
-                  value={loginFormData.email}
-                  onInputChange={(name, value) => {
-                    loginChange(name, value);
-                  }}
-                />
-              </Col>
-              <Col xs='12' md='12'>
-                <Input
-                  type={'password'}
-                  error={formErrors['password']}
-                  label={'Password'}
-                  name={'password'}
-                  placeholder={'Please Enter Your Password'}
-                  value={loginFormData.password}
-                  onInputChange={(name, value) => {
-                    loginChange(name, value);
-                  }}
-                />
-              </Col>
-            </Col>
-            <Col xs={{ size: 12, order: 1 }} md={{ size: '6', order: 2 }}>
-              <SignupProvider />
-            </Col>
-          </Row>
-          <hr />
-          <div className='d-flex flex-column flex-md-row align-items-md-center justify-content-between'>
-            <div className='d-flex justify-content-between align-items-center mb-3 mb-md-0'>
+      <Grid textAlign="center" style={{ height: "100vh" }} verticalAlign="middle">
+        <Grid.Column style={{ maxWidth: 450 }}>
+          <Header as="h2" color="teal" textAlign="center">
+            <Image src="/logo.png" /> Log-in to your account
+            Helloooo
+      </Header>
+          <Form size="large" onSubmit={handleSubmit} noValidate>
+            <Segment stacked>
+              <Form.Input
+                fluid
+                icon="user"
+                iconPosition="left"
+                placeholder="E-mail address"
+                type={'text'}
+                error={formErrors['email']}
+                label={'Email Address'}
+                name={'email'}
+                value={loginFormData.email}
+                onInputChange={(name, value) => {
+                  loginChange(name, value);
+                }}
+              />
+              <Form.Input
+                fluid
+                icon="lock"
+                iconPosition="left"
+
+
+                type={'password'}
+                error={formErrors['password']}
+                label={'Password'}
+                name={'password'}
+                placeholder={'Please Enter Your Password'}
+                value={loginFormData.password}
+                onInputChange={(name, value) => {
+                  loginChange(name, value);
+                }}
+              />
+
+
               <Button
+                color="teal" fluid size="large"
                 type='submit'
                 variant='primary'
-                text='Login'
+                text='signin'
                 disabled={isSubmitting}
               />
               <Button
@@ -95,16 +91,14 @@ class Login extends React.PureComponent {
                 className='ml-md-3'
                 onClick={registerLink}
               />
-            </div>
-            <Link
-              className='redirect-link forgot-password-link'
-              to={'/forgot-password'}
-            >
-              Forgot Password?
-            </Link>
-          </div>
-        </form>
-      </div>
+            </Segment>
+          </Form>
+          <Message>
+            New to us? <a href="#">Sign Up</a>
+          </Message>
+        </Grid.Column>
+      </Grid>
+
     );
   }
 }

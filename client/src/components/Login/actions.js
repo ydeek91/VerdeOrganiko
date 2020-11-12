@@ -93,7 +93,7 @@ export const signOut = () => {
     };
 
     dispatch(clearAuth());
-    dispatch(clearAccount());
+    //dispatch(clearAccount());
     dispatch(push('/login'));
 
     localStorage.removeItem('token');
