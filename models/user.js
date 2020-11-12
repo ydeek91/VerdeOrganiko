@@ -24,14 +24,14 @@ const UserSchema = new Schema({
     required: true,
     default: 'email'
   },
-  googleId: {
-    type: String,
-    unique: true
-  },
-  facebookId: {
-    type: String,
-    unique: true
-  },
+  // googleId: {
+  //   type: String,
+  //   unique: true
+  // },
+  // facebookId: {
+  //   type: String,
+  //   unique: true
+  // },
   avatar: {
     type: String
   },

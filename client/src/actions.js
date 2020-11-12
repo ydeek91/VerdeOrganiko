@@ -5,7 +5,8 @@
  */
 
 import { bindActionCreators } from 'redux';
-
+import * as account from './components/Account/actions';
+import * as users from './components/Users/actions';
 import * as authentication from './components/Authentication/actions';
 import * as signup from './components/Signup/actions';
 import * as login from './components/Login/actions';
@@ -20,6 +21,8 @@ export default function mapDispatchToProps(dispatch) {
             ...authentication,
             ...signup,
             ...login,
+            ...account,
+            ...users,
 
         },
         dispatch

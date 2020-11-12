@@ -7,10 +7,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Redirect, Link, withRouter } from 'react-router-dom';
-import { Grid } from 'semantic-ui-react';
+import { Grid, Button, Form, } from 'semantic-ui-react';
 import actions from '../../actions';
 import Input from '../../components/Input';
-import Button from '../../components/SignupButton';
+import SignupButton from '../../components/SignupButton';
 import LoadingIndicator from '../../components/LoadingIndicator';
 import SignupProvider from '../../components/SignupProvider';
 import Checkbox from '../../components/Checkbox';
@@ -46,7 +46,7 @@ export class Signup extends React.PureComponent {
                         <Grid.Row>
                             <Grid.Column>
 
-                                <Input
+                                <Form.Input
                                     type={'text'}
                                     error={formErrors['email']}
                                     label={'Email Address'}
@@ -59,7 +59,7 @@ export class Signup extends React.PureComponent {
                                 />
                             </Grid.Column>
                             <Grid.Column>
-                                <Input
+                                <Form.Input
                                     type={'text'}
                                     error={formErrors['firstName']}
                                     label={'First Name'}
@@ -72,7 +72,7 @@ export class Signup extends React.PureComponent {
                                 />
                             </Grid.Column>
                             <Grid.Column>
-                                <Input
+                                <Form.Input
                                     type={'text'}
                                     error={formErrors['lastName']}
                                     label={'Last Name'}
@@ -85,7 +85,7 @@ export class Signup extends React.PureComponent {
                                 />
                             </Grid.Column>
                             <Grid.Column>
-                                <Input
+                                <Form.Input
                                     type={'password'}
                                     label={'Password'}
                                     error={formErrors['password']}
@@ -98,20 +98,13 @@ export class Signup extends React.PureComponent {
                                 />
                             </Grid.Column>
 
-                            <Grid.Column>
-                                <SignupProvider />
-                            </Grid.Column>
+
                         </Grid.Row>
                     </Grid>
                     <hr />
-                    <Checkbox
-                        id={'subscribe'}
-                        label={'Subscribe to newsletter'}
-                        checked={isSubscribed}
-                        toggleCheckboxChange={subscribeChange}
-                    />
+
                     <div className='d-flex flex-column flex-md-row align-items-md-center justify-content-between'>
-                        <Button
+                        <SignupButton
                             type='submit'
                             variant='primary'
                             text='Sign Up'

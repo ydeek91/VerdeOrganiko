@@ -5,16 +5,29 @@
  */
 
 import React from 'react';
-
+import axios from 'axios';
 import { Redirect, Link } from 'react-router-dom';
-
+import { Grid, Header, Image, Form, Segment, Message } from "semantic-ui-react";
+import { connect } from 'react-redux';
 import actions from '../../actions';
-import Input from '../../components/Input';
-import Button from '../../components/Button';
-import LoadingIndicator from '../../components/LoadingIndicator';
-import SignupProvider from '../../components/SignupProvider';
+import Input from '../Input';
+import { Button } from 'semantic-ui-react';
+import LoadingIndicator from '../LoadingIndicator';
+import SignupProvider from '../SignupProvider';
 
-class Login extends React.PureComponent {
+class Login extends React.Component {
+  state = {
+    email: '',
+    password: '',
+    authenticated: false
+  }
+  handelinputchange = (event) => {
+    const { name, value } = event.target;
+    console.log(name, value);
+    this.setState({
+      [name]: value
+    })
+  }
   render() {
     const {
       authenticated,
@@ -26,7 +39,7 @@ class Login extends React.PureComponent {
       isSubmitting
     } = this.props;
 
-    if (authenticated) return <Redirect to='/dashboard' />;
+    if (this.state.authenticated) return <Redirect to='/' />;
 
     const registerLink = () => {
       this.props.history.push('/register');
@@ -34,7 +47,12 @@ class Login extends React.PureComponent {
 
     const handleSubmit = event => {
       event.preventDefault();
-      login();
+      //login();
+      axios.post('/api/login', this.state)
+        .then(res => {
+          console.log(res)
+          this.setState({ authenticated: true })
+        });
     };
 
     return (
@@ -55,10 +73,11 @@ class Login extends React.PureComponent {
                 error={formErrors['email']}
                 label={'Email Address'}
                 name={'email'}
-                value={loginFormData.email}
-                onInputChange={(name, value) => {
-                  loginChange(name, value);
-                }}
+                value={this.state.email}
+                //onInputChange={(name, value) => {
+                //  loginChange(name, value);
+                //}}
+                onChange={this.handelinputchange}
               />
               <Form.Input
                 fluid
@@ -71,30 +90,33 @@ class Login extends React.PureComponent {
                 label={'Password'}
                 name={'password'}
                 placeholder={'Please Enter Your Password'}
-                value={loginFormData.password}
-                onInputChange={(name, value) => {
-                  loginChange(name, value);
-                }}
+                value={this.state.password}
+                //onInputChange={(name, value) => {
+                //loginChange(name, value);
+                // }}
+                onChange={this.handelinputchange}
+
               />
 
 
               <Button
-                color="teal" fluid size="large"
+                fluid size="large"
                 type='submit'
                 variant='primary'
                 text='signin'
                 disabled={isSubmitting}
-              />
+                onClick={handleSubmit}
+              >Sign in </Button>
               <Button
                 text='Create an account'
                 variant='link'
                 className='ml-md-3'
                 onClick={registerLink}
-              />
+              >Create an Account</Button>
             </Segment>
           </Form>
           <Message>
-            New to us? <a href="#">Sign Up</a>
+            New to us? <a href="/sign-up">Sign Up</a>
           </Message>
         </Grid.Column>
       </Grid>

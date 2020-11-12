@@ -16,6 +16,8 @@ const keys = require('../config/keys');
 const { secret, tokenLife } = keys.jwt;
 
 router.post('/login', (req, res) => {
+    console.log(secret);
+    console.log('let do it');
     const email = req.body.email;
     const password = req.body.password;
 
@@ -45,8 +47,8 @@ router.post('/login', (req, res) => {
                 const payload = {
                     id: user.id
                 };
-
-                jwt.sign(payload, secret, { expiresIn: tokenLife }, (err, token) => {
+                //const token = process.env.JWT_TOKEN;
+                jwt.sign(payload, 'verdeorganik', { expiresIn: 3600 }, (err, token) => {
                     res.status(200).json({
                         success: true,
                         token: `Bearer ${token}`,
@@ -126,7 +128,7 @@ router.post('/auth/register', (req, res) => {
                 user.password = hash;
                 console.log(user);
                 console.log("final project");
-                user.save(async (err, user) => {
+                User.create(user).then((err, user) => {
                     if (err) {
                         return res.status(400).json({
                             error: 'Your request could not be processed. Please try again.'
