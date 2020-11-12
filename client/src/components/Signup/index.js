@@ -44,7 +44,7 @@ export class Signup extends React.PureComponent {
                 <form onSubmit={handleSubmit} noValidate>
                     <Grid>
                         <Grid.Row>
-                            <Grid.Column>
+                            <Grid.Field>
 
                                 <Form.Input
                                     type={'text'}
@@ -57,8 +57,8 @@ export class Signup extends React.PureComponent {
                                         signupChange(name, value);
                                     }}
                                 />
-                            </Grid.Column>
-                            <Grid.Column>
+                            </Grid.Field>
+                            <Grid.Field>
                                 <Form.Input
                                     type={'text'}
                                     error={formErrors['firstName']}
@@ -70,8 +70,8 @@ export class Signup extends React.PureComponent {
                                         signupChange(name, value);
                                     }}
                                 />
-                            </Grid.Column>
-                            <Grid.Column>
+                            </Grid.Field>
+                            <Grid.Field>
                                 <Form.Input
                                     type={'text'}
                                     error={formErrors['lastName']}
@@ -83,8 +83,8 @@ export class Signup extends React.PureComponent {
                                         signupChange(name, value);
                                     }}
                                 />
-                            </Grid.Column>
-                            <Grid.Column>
+                            </Grid.Field>
+                            <Grid.Field>
                                 <Form.Input
                                     type={'password'}
                                     label={'Password'}
@@ -96,7 +96,7 @@ export class Signup extends React.PureComponent {
                                         signupChange(name, value);
                                     }}
                                 />
-                            </Grid.Column>
+                            </Grid.Field>
 
 
                         </Grid.Row>
