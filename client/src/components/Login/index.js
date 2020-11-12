@@ -60,7 +60,7 @@ class Login extends React.Component {
         <Grid.Column style={{ maxWidth: 450 }}>
           <Header as="h2" color="teal" textAlign="center">
             <Image src="/logo.png" /> Log-in to your account
-            Helloooo
+
       </Header>
           <Form size="large" onSubmit={handleSubmit} noValidate>
             <Segment stacked>
@@ -106,7 +106,7 @@ class Login extends React.Component {
                 text='signin'
                 disabled={isSubmitting}
                 onClick={handleSubmit}
-              >Sign in </Button>
+              >Login </Button>
               <Button
                 text='Create an account'
                 variant='link'
