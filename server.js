@@ -2,9 +2,19 @@ const express = require("express");
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const axios = require("axios");
+const path = require("path");
 
 const PORT = process.env.PORT || 3001;
 const app = express();
+
+//Connet to mongoose
+mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://localhost/verdeorganiko",
+  {
+    useNewUrlParser: true,
+  }
+);
+
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -24,13 +34,7 @@ app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
-//Connet to mongoose
-mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/verdeorganiko",
-  {
-    useNewUrlParser: true,
-  }
-);
+
 
 app.listen(PORT, function () {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
