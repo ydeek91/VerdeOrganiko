@@ -59,7 +59,7 @@ class Login extends React.Component {
       <Grid textAlign="center" style={{ height: "100vh" }} verticalAlign="middle">
         <Grid.Column style={{ maxWidth: 450 }}>
           <Header as="h2" color="teal" textAlign="center">
-            <Image src="/logo.png" /> Log-in to your account
+            <Image src="https://scontent-lga3-2.cdninstagram.com/v/t51.2885-15/s150x150/122179190_345214929885766_801430817557002940_n.jpg?_nc_ht=scontent-lga3-2.cdninstagram.com&_nc_ohc=rEYEG4IkrwsAX_A5bQ8&_nc_tp=25&oh=2320abacac895acf0901e1cf6701fb45&oe=5FD768D7" /> Log-in to your account
 
       </Header>
           <Form size="large" onSubmit={handleSubmit} noValidate>
@@ -107,6 +107,7 @@ class Login extends React.Component {
                 disabled={isSubmitting}
                 onClick={handleSubmit}
               >Login </Button>
+              <br />
               <Button
                 text='Create an account'
                 variant='link'
